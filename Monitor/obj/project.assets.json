@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Desktop\\Veeam\\Monitor\\Monitor.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Desktop\\ProcessesMonitor\\processes-monitor\\Monitor\\Monitor.csproj",
       "projectName": "Monitor",
-      "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Veeam\\Monitor\\Monitor.csproj",
+      "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\ProcessesMonitor\\processes-monitor\\Monitor\\Monitor.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Veeam\\Monitor\\obj\\",
+      "outputPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\ProcessesMonitor\\processes-monitor\\Monitor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

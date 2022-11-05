@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XflkW7hYCHZUIWH9Y0eSTZKa24XqQ3QiPs9sWpNxALHBAL3kIdjMGTX+L1xWyA0LED6qpJ86DlRaW8NndMLGaA==",
+  "dgSpecHash": "xvjHzTuVyKIx3t9NVUlS/LWohrBUb8I1g+EIPOrd3kY14lnVuSLge/l6UiWN1XiyaJ55DBzgNkDRyGPObrIKgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Veeam\\TestMonitor\\TestMonitor.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\ProcessesMonitor\\processes-monitor\\TestMonitor\\TestMonitor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
