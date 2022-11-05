@@ -12,6 +12,7 @@ monitoring (new processes might appear later). The utility stops when a
 special keyboard button is pressed (q, Enter).
 
 Test Monitor:
+Before running each test, make sure the following processes are not running yet: notepad, wscript and mspaint
 
 1. TestMonitor.MonitorProgramsTests:
    - Expected KillLog Tests
