@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 
-internal class Program
+public class RunMain
 {
     static async Task Main(string[] args)
     {
