@@ -12,10 +12,27 @@ monitoring (new processes might appear later). The utility stops when a
 special keyboard button is pressed (q, Enter).
 
 Test Monitor:
-TestMonitor.MonitorProgramsTests:
-  Expected KillLog Tests
-  Invalid Format Tests
-TestMonitor.InvalidFormatsTests:
-  With 0 Commands
-  With 1 Commands
-  With 2 Commands
+
+1. TestMonitor.MonitorProgramsTests:
+   - Expected KillLog Tests
+     - With 0 running processes
+     - With 0 valued frequency
+     - With 0 valued lifetime
+     - With 1 running processes to monitor
+     - With 2 equal running processes to monitor
+     - With 2 running processes to monitor
+     - With 3 running processes to monitor
+   - Invalid Format Tests
+     - With 0 arguments
+     - With 0 numeric values
+     - With 2 arguments
+     - With 4 arguments
+     - With negative valued arguments
+     - With non alphanumeric arguments
+
+2. TestMonitor.InvalidFormatsTests:
+   - With 0 Commands
+   - With 1 Command
+   - With 2 Commands
+
+
