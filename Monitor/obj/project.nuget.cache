@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iSo7YCPKVWTOh3ZljWw3sAS9WVkxC+p7apr2/tCSia+0eHAbToKDF84cgKgXBA74uxBWGmfxGcpsvP2BQyMx/A==",
+  "dgSpecHash": "sPdcA3dhUtp7toBZpf2YMCuRCl2/CmAXWaQ4r5xD0A26jUiK2wHlwPEiVSQo2GESNTYkhHDI+hZEo09hUojs0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\ProcessesMonitor\\processes-monitor\\Monitor\\Monitor.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Gabriel\\processes-monitor\\Monitor\\Monitor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

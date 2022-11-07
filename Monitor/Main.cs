@@ -1,41 +1,43 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
+using Monitor.MonitorLocalMachineService;
 
-public class RunMain
+namespace Monitor.Main
 {
-    static async Task Main(string[] args)
+    public static class RunMain
     {
-        List<string> killLog = new List<string>();
-
-        var processToMonitorTuple = new List<Tuple<string[], Stopwatch>>();
-        if (args.Length > 0)
+        static void Main(string[] args)
         {
-            processToMonitorTuple.Add(new Tuple<string[], Stopwatch>(args, new Stopwatch()));
-            processToMonitorTuple[0].Item2.Start();
-        }
+            List<string> killLog = new();
 
-        var newProcess = String.Empty;
-        Console.WriteLine("Enter 'q' to stop:");
-        do
-        {
-            new Thread(() =>
+            var processToMonitorTuple = new List<Tuple<string[], Stopwatch>>();
+            if (args.Length > 0)
             {
-                Thread.CurrentThread.IsBackground = true;
-                while (processToMonitorTuple.ToList().Count > 0)
+                processToMonitorTuple.Add(new Tuple<string[], Stopwatch>(args, new Stopwatch()));
+                processToMonitorTuple[0].Item2.Start();
+            }
+
+            var newProcess = String.Empty;
+            Console.WriteLine("Enter 'q' to stop:");
+            do
+            {
+                new Thread(() =>
                 {
-                    Thread.Sleep(1000);
-                    killLog = MonitorLocalMachineService.MonitorWindowsProcessesAsync(processToMonitorTuple);
-                }
-            }).Start();
+                    Thread.CurrentThread.IsBackground = true;
+                    while (processToMonitorTuple.ToList().Count > 0)
+                    {
+                        Thread.Sleep(1000);
+                        killLog = MonitorLocalMachineService.MonitorLocalMachineService.MonitorWindowsProcessesAsync(processToMonitorTuple);
+                    }
+                }).Start();
 
-            newProcess = Console.ReadLine();
+                newProcess = Console.ReadLine();
 
-            processToMonitorTuple.Add(new Tuple<string[], Stopwatch>(newProcess.Split(' '), new Stopwatch())) ;
-            MonitorLocalMachineService.StartTimers(processToMonitorTuple);
+                processToMonitorTuple.Add(new Tuple<string[], Stopwatch>(newProcess.Split(' '), new Stopwatch()));
+                MonitorLocalMachineService.MonitorLocalMachineService.StartTimers(processToMonitorTuple);
 
-        } while (!newProcess.Equals("q"));
-
-        Console.WriteLine("PROCESS STATUS/KILL LOG:\n" + killLog.ToList());
+            } while (!newProcess.Equals("q"));
+        }
     }
 }

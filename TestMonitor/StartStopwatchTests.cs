@@ -1,3 +1,4 @@
+using Monitor.MonitorLocalMachineService;
 using System.Diagnostics;
 
 namespace TestMonitor.StartStartTimers
@@ -14,7 +15,7 @@ namespace TestMonitor.StartStartTimers
             MonitorLocalMachineService.StartTimers(processToMonitorTuple);
 
             //Assert
-            Assert.IsEmpty(processToMonitorTuple);
+            Assert.That(processToMonitorTuple, Is.Empty);
         }
 
         [Test]
@@ -51,10 +52,13 @@ namespace TestMonitor.StartStartTimers
             //Act
             MonitorLocalMachineService.StartTimers(processToMonitorTuple);
 
-            //Assert
-            Assert.That(processToMonitorTuple[0].Item2.Elapsed.TotalSeconds > 0, Is.EqualTo(true));
-            Assert.That(processToMonitorTuple[1].Item2.Elapsed.TotalSeconds > 0, Is.EqualTo(true));
-        }
 
+            //Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(processToMonitorTuple[0].Item2.Elapsed.TotalSeconds > 0, Is.EqualTo(true));
+                Assert.That(processToMonitorTuple[1].Item2.Elapsed.TotalSeconds > 0, Is.EqualTo(true));
+            });
+        }
     }
 }
