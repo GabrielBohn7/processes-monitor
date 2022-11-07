@@ -21,6 +21,7 @@ Before running each test, make sure the following processes are not already runn
      - With 0 valued lifetime
      - With 1 running processes to monitor
      - With 2 equal running processes to monitor
+     - With 2 running processes after killing procces to monitor
      - With 2 running processes to monitor
      - With 3 running processes to monitor
    - Invalid Format Tests
@@ -29,6 +30,7 @@ Before running each test, make sure the following processes are not already runn
      - With 2 arguments
      - With 4 arguments
      - With negative valued arguments
+     - With incomplete valued arguments
      - With non alphanumeric arguments
 
 2. TestMonitor.InvalidFormatsTests:
