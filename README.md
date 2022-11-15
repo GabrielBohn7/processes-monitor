@@ -11,7 +11,7 @@ log (named KillLog). When no process exists at any given moment, the utility con
 monitoring (new processes might appear later). The utility stops when a 
 special keyboard button is pressed (q, Enter).
 
-Example: Monitor.exe monitor 2 1
+Example: Monitor.exe notepad 2 1
 
 Test Monitor:
 Before running each test, make sure the following processes are not already running: notepad, wscript and mspaint
